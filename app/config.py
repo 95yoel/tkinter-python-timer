@@ -25,7 +25,7 @@ class Config:
         # Set the icon of the window
         self.root.iconbitmap(config.get("app_icon"))
 
-        # Cambiar el fondo de la ventana principal a negro
+        # Set the background color
         self.root.configure(bg=config.get("bg_color"))
 
         
