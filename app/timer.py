@@ -3,6 +3,7 @@ from config import Config
 from utilities import toggle_contador, restart_timer, update_time
 import json
 
+# Load the configuration
 with open("config.json", "r") as file:
     config = json.load(file)
 
