@@ -10,20 +10,20 @@ def toggle_contador(self, event=None):
             self.initial_time += time.time() - self.stoped_time
         self.started = True
         self.update_time()
-        self.buttom_start.config(text="Detener")
+        self.buttom_start.config(text="Stop")
         self.buttom_restart.config(state=tk.DISABLED)
     else:
         self.started = False
         self.stoped_time = time.time()
-        self.buttom_start.config(text="Continuar")
+        self.buttom_start.config(text="Continue")
         self.buttom_restart.config(state=tk.NORMAL)
 
-def reiniciar_contador(self):
+def restart_timer(self):
     self.started = False
     self.initial_time = None
     self.remaining_time = 0
     self.label_time.config(text="00:00:00.000")
-    self.buttom_start.config(text="Iniciar")
+    self.buttom_start.config(text="Start")
     self.buttom_restart.config(state=tk.DISABLED)
 
 def update_time(self):

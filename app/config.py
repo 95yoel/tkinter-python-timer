@@ -1,5 +1,8 @@
 import tkinter as tk
+import json
 
+with open("config.json", "r") as file:
+    config = json.load(file)
 
 class Config:
     def __init__(self, root):
@@ -8,10 +11,10 @@ class Config:
     def configure_app(self):
         
         # Set the title for the window
-        self.root.title("Timer")
+        self.root.title(config.get("app_title"))
 
         # Set the default window size
-        self.root.geometry("300x150")
+        self.root.geometry(config.get("window_size"))
 
         # Disable resizing the window
         self.root.resizable(False, False)
@@ -20,9 +23,9 @@ class Config:
         self.root.eval('tk::PlaceWindow . center') 
 
         # Set the icon of the window
-        self.root.iconbitmap("images/timer_icon.ico")
+        self.root.iconbitmap(config.get("app_icon"))
 
         # Cambiar el fondo de la ventana principal a negro
-        self.root.configure(bg="#1f1f1f")
+        self.root.configure(bg=config.get("bg_color"))
 
         

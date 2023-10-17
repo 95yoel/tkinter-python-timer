@@ -1,0 +1,10 @@
+{
+    "app_title": "Timer",
+    "window_size": "300x150",
+    "app_icon": "images/timer_icon.ico",
+    "bg_color": "#1f1f1f",
+    "btn_color": "gray",
+    "font_color": "white",
+    "font":"Lucida Console",
+    "font_size": 24
+}
